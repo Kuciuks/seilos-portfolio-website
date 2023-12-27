@@ -20,8 +20,8 @@ export default function Page_1() {
 
   return (
     <div className="page_1_container">
-      <div className='hero'>
-        <img className='hero-img' src={imageSrc} alt='' />
+      <div className='hero1'>
+        <img className='hero-img1' src={imageSrc} alt='' />
       </div>
     </div>
   );
