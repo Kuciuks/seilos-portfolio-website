@@ -19,7 +19,7 @@ export default function Page_2() {
   return (
     
     <div className="page_2_container">
-      <div className='title'>
+      <div className='hero'>
         <img className='hero-img' src={imageSrc} alt='' />
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function Page_1() {
   useEffect(() => {
     const width = document.querySelector(`.page_1_container`).clientWidth;
 
-    if (width > 425) {
+    if (width > 426) {
       setImageSrc(Bg2); // Set the larger image source
       console.log("bigger");
     } else {

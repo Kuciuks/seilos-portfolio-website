@@ -5,8 +5,6 @@ import Painting3 from "../assets/painting3.jpg"
 import Painting4 from "../assets/painting4.jpg"
 import Painting5 from "../assets/painting5.jpg"
 import Painting6 from "../assets/painting6.jpg"
-import Painting7 from "../assets/painting7.jpg"
-
 export default function Page_5() {
   return (
     <div className="page_5_container">
