@@ -1,0 +1,21 @@
+.page_4_container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+h1{
+    margin: 0;
+    text-align: center;
+}
+.page_4_container > div{
+    width: 15rem;
+}
+
+.inv-img{
+    width: 100%;
+}
