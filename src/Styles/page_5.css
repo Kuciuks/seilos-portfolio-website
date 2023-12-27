@@ -16,19 +16,27 @@
     width: inherit;
   }
   
-  .anonym_1, .anonym_2 {
-    height: 50%;
+  .container-flex-control{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: inherit;
     width: inherit;
+  }
+  .anonym_1, .anonym_2 {
+    width: inherit;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    padding: 3rem;
   }
 
   .anonym-img{
-    width: 10rem;
+    max-width: 15rem;
     background-color: aqua;
+    margin: 0 auto;
   }
   
   .a-img{
@@ -42,4 +50,10 @@
     margin: .5rem 0 0 0;
     color: aliceblue;
     font-size: .5rem;
+  }
+
+  @media only screen and (min-width: 426px){
+    .container-flex-control{
+      flex-direction: row;
+    }
   }

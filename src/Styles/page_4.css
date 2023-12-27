@@ -1,6 +1,5 @@
 .page_4_container{
     height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +12,11 @@ h1{
     text-align: center;
 }
 .page_4_container > div{
-    width: 15rem;
+    max-width: 30rem;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .inv-img{

@@ -12,17 +12,15 @@
     scroll-snap-align: center;
     scroll-snap-stop: always;
     display: inline-block;
-    height: inherit;
-    width: inherit;
+    display: flex;
+    align-items: center;
 }
 .artist-container{
-    width: inherit;
-    height: inherit;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 0 10px;
     align-items: center;
 }
 .image{
@@ -32,12 +30,14 @@
     border: .2rem solid rgb(190, 11, 245);
 }
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6{
-    width: 15rem;
+    margin: 0 2rem;
+    max-width: 20rem;
 }
 .title-1,.title-2,.title-3,.title-4,.title-5,.title-6{
     color: antiquewhite;
     border-bottom: 2px solid rgb(254, 254, 255);
     margin: 1.5rem 0 0 0;
-    font-size: .8rem;
+    font-size: .6rem;
+    margin: 0 auto;
 }
 
