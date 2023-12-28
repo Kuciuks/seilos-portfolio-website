@@ -9,8 +9,8 @@
     width: 100vw;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
     background-color: #000000;
+    height: 100vh;
 }
 
 .main > div{
@@ -20,11 +20,11 @@
 }
 
 /* Optional: Hide scrollbar track */
-.main::-webkit-scrollbar {
+/* .main::-webkit-scrollbar {
     width: 0;
-}
+} */
 
 /* Optional: Hide scrollbar handle */
-.main::-webkit-scrollbar-thumb {
+/* .main::-webkit-scrollbar-thumb {
     background-color: transparent;
-}
+} */

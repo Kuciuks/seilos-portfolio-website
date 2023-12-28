@@ -6,32 +6,51 @@ import Page3 from './Components/page_3.jsx';
 import Page4 from './Components/page_4.jsx';
 import Page5 from './Components/page_5.jsx';
 import Page6 from './Components/page_6.jsx';
-
 export default function App() {
 
-  // const mainRef = useRef(null);
-  // const count = useRef(0)
 
-  // useEffect(()=>{
-  //   const clientHeight = document.querySelector('.main').clientHeight
-  //   console.log(clientHeight/6)
+  // const divRef = useRef(null)
+  // const countRef = useRef(null)
 
+  // const handleScroll = () => {
+  //   divRef.current = document.querySelector('.main')
+  //   countRef.current = document.querySelector('.hero2')
+  //   const sections = divRef.current.children;
 
-  // })
+  //   console.log(sections)
 
-  // const handleScroll = ()=>{
-  //   console.log('scroll')
-  //   mainRef.current.style.transform = `translateY(-${count.current}vh)`;
+  //   // for (let i = 0; i < sections.length; i++) {
+  //   //   const rect = sections[i].getBoundingClientRect();
+  //   //   if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+  //   //     console.log(`Scrolled to section ${i + 1}`);
+  //   //     if(i == 1){
+  //   //       countRef.current.classList.add('run_out')
+  //   //       countRef.current.classList.remove('run_in')
+  //   //     }
+  //   //     else{
+  //   //       countRef.current.classList.remove('run_out')
+  //   //     }
+
+  //   //     break; // Stop checking further sections
+  //   //   }
+  //   // }
   // }
 
-  // useEffect(()=>{
-  //   window.addEventListener("scrollend", handleScroll)
 
+
+
+  // useEffect(() => {
+  //   divRef.current = document.querySelector('.main')
+  //   countRef.current = document.querySelector('.hero2')
+  //   countRef.current.classList.add('run_in')
+  //   window.addEventListener("wheel", handleScroll)
+  
   //   return()=>{
-  //     window.removeEventListener("scrollend", handleScroll)
+  //     window.removeEventListener("wheel", handleScroll)
   //   }
-    
   // })
+
+
 
   return (
     <div className='main'>
