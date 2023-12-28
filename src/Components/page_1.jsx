@@ -1,58 +1,61 @@
 import '../Styles/page_1.css';
 import Bg from "../assets/hero-bg.jpg";
 import Bg2 from "../assets/hero-person.png";
-import { useEffect, useRef, useState} from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export default function Page_1() {
-
-  const [state, setState] = useState(true)
-  const heroRef = useRef(null)
-  const [ref, inView, entry] = useInView({
-    rootMargin: `${0}px`,
-    root: null,
-    threshold: 1,
+  const [state, setState] = useState(true);
+  const heroRef = useRef(null);
+  const personRef = useRef(null)
+  const [ref, inView] = useInView({
+    triggerOnce: true, // This ensures the event is triggered only once when the element comes into view
   });
-  
 
-  const handleScroll = () => {
-    console.log(inView, entry)
+  const handleIntersection = (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      console.log(true)
+      setState(true);
+    } else {
+      console.log(false)
 
-    if(inView){
-      setState(true)
-
+      setState(false);
     }
-    else{
-      setState(false)
+  };
+
+  useEffect(() => {
+    personRef.current = document.querySelector('.hero2');
+    heroRef.current = document.querySelector('.hero1');
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 1, // Trigger the event when the target is fully in view
+    });
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
     }
 
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
+  }, [heroRef]); // Add any dependencies if needed
+
+  if (personRef.current != null) {
+    if (state) {
+      personRef.current.classList.add('run_in');
+      personRef.current.classList.remove("run_out");
+    } else {
+      personRef.current.classList.add('run_out');
+      personRef.current.classList.remove("run_in");
+    }
   }
 
-
-  if(heroRef.current != null){
-    if (state){
-      heroRef.current.classList.add('run_in')
-      heroRef.current.classList.remove("run_out")
-    }
-    else{
-      heroRef.current.classList.add('run_out')
-      heroRef.current.classList.remove("run_in")
-    }
-  }
-
-  useEffect(()=>{
-    heroRef.current = document.querySelector('.hero2')
-    window.addEventListener("wheel", handleScroll)
-    return()=>{
-      window.removeEventListener('wheel', handleScroll)
-    }
-  })
-
-  
   return (
-    <div className="page_1_container" ref={ref}>
+    <div className="page_1_container">
       <div className='container'>
-        <div className='hero1'>
+        <div className='hero1' ref={ref}>
           <img className='bg' src={Bg} alt='' />
         </div>
       </div>
