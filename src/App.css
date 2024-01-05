@@ -20,11 +20,11 @@
 }
 
 /* Optional: Hide scrollbar track */
-/* .main::-webkit-scrollbar {
+.main::-webkit-scrollbar {
     width: 0;
-} */
+}
 
 /* Optional: Hide scrollbar handle */
-/* .main::-webkit-scrollbar-thumb {
+.main::-webkit-scrollbar-thumb {
     background-color: transparent;
-} */
+}

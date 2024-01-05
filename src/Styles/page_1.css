@@ -1,56 +1,81 @@
 .page_1_container {
-    height: 100vh;
-    width: 100vw;
-  }
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .container{
-    height: 100%;
-    width: 100vw;
+/* First part of the home screen (the title image) */
+.hero1{
+  object-fit: contain;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.person {
+  object-fit:cover;
+  width: 100%; 
+  height: 100%;
+  scale: 1;
+}
+.bg{
+  width: 100%;
+}
+
+
+/* Second part of the home page (the person drawing) */
+.hero2{
+  position: relative;
+  bottom: -100%;
+}
+.run_in{
+  animation: anim_in 1.3s forwards;
+}
+.run_out{ 
+  animation: anim_out 1s forwards;
+}
+
+@keyframes anim_in{
+  from{
+    bottom: -100%;
+  }
+  to{
+    bottom: 0;
+  }
+}
+
+@keyframes anim_out{
+  from{
+    bottom: 0;
+    opacity: 1;
+  }
+  to{
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/* @media only screen and (min-width: 500px){
+  .hero2{
+    display: none;
   }
   .hero1{
-    object-fit: cover;
-    max-width: 100vw;
-    margin: 0 auto;
-    scale: 1;
-  }
-  .person {
-    object-fit:cover;
-    width: 100%; 
     height: 100%;
-    scale: 1;
+    display: flex;
+    align-items: center;
   }
-  .bg{
-    max-width: 100%;
-    height: 100%;
+} */
+@media only screen and (min-width: 500px){
+  .page_1_container{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
-
-
-
   .hero2{
-    position: relative;
-    bottom: 0%;
+    display: block;
+    scale: .8;
   }
-  .run_in{
-    animation: anim_in 1.3s forwards;
+  .hero1{
+    padding: 0 0 5rem 0;
   }
-  .run_out{ 
-    animation: anim_out 1s forwards;
-  }
-
-  @keyframes anim_in{
-    from{
-      bottom: -1000%;
-    }
-    to{
-      bottom: 50%;
-   }
-  }
-
-  @keyframes anim_out{
-    from{
-      bottom: 0%;
-    }
-    to{
-      bottom: 300%;
-    }
-  }
+}

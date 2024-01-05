@@ -15,11 +15,10 @@ export default function Page_1() {
   const handleIntersection = (entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      console.log(true)
+      console.log(entry)
       setState(true);
     } else {
       console.log(false)
-
       setState(false);
     }
   };
@@ -54,11 +53,9 @@ export default function Page_1() {
 
   return (
     <div className="page_1_container">
-      <div className='container'>
         <div className='hero1' ref={ref}>
           <img className='bg' src={Bg} alt='' />
         </div>
-      </div>
 
       <div className='hero2'>
         <img className='person' src={Bg2}/>
