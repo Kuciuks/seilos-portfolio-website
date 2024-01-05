@@ -3,12 +3,12 @@ import statement1 from "../assets/artist-statement-phone.jpg"
 import statement2 from "../assets/artist-statement-dekstop.jpg"
 import { useEffect, useRef, useState } from 'react';
 export default function Page_2() {
-  const [imageSrc, setImageSrc] = useState(statement1); // Initialize with the default image
+  const [imageSrc, setImageSrc] = useState(null); // Initialize with the default image
   const widthRef = useRef(0)
   const handleResize = () =>{
-    widthRef.current = document.querySelector(`.page_1_container`).clientWidth;
+    widthRef.current = document.querySelector('.page_2_container').clientWidth;
 
-    if (widthRef.current > 425) {
+    if (widthRef.current > 500) {
       setImageSrc(statement2); // Set the larger image source
       console.log("bigger");
     } else {
@@ -18,17 +18,13 @@ export default function Page_2() {
   }
 
   useEffect(() => {
-
-    window.addEventListener('resize', handleResize)
-
+    window.addEventListener('DOMContentLoaded', handleResize())
     return()=>{
-      window.removeEventListener('resize', handleResize)
-
+      window.removeEventListener('DOMContentLoaded', handleResize())
     }
-
   }, []);
-  return (
-    
+
+  return (  
     <div className="page_2_container">
       <div className='hero'>
         <img className='hero-img' src={imageSrc} alt='' />
