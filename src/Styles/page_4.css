@@ -11,13 +11,21 @@ h1{
     margin: 0;
     text-align: center;
 }
-.page_4_container > div{
+.instructions{    
     max-width: 30rem;
     height: 50%;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    align-items: start;
 }
+.invitation{    
+    max-width: 30rem;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: end;
+}
+
 
 .inv-img{
     width: 100%;
