@@ -29,14 +29,14 @@
     box-shadow: 0px 0px 10px 5px rgb(190, 11, 245);
 }
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6{
-    margin: 0 auto;
-    max-width: 26rem;
+    margin: 0 5rem;
+    max-width: 20rem;
     padding-bottom: 1.25rem;
 }
 .title-1,.title-2,.title-3,.title-4,.title-5,.title-6{
     color: antiquewhite;
     border-bottom: 2px solid rgb(254, 254, 255);
-    font-size: 1rem;
+    font-size: .8rem;
     margin: 0 auto;
 }
 
