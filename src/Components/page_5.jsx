@@ -34,47 +34,49 @@ export default function Page_5() {
       </div>
       
       <div className="container">
+        <div className="container-flex-control">
 
-        <div className="anonym_1">
-          <div className="anonym-img">
-            <img src={Painting3} className="a-img"/>
+          <div className="anonym_1">
+            <div className="anonym-img">
+              <img src={Painting3} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>Information for the artist</h1>
+            </div>
           </div>
-          <div className="anonym-title">
-            <h1>Information for the artist</h1>
+
+          <div className="anonym_2">  
+            <div className="anonym-img">
+              <img src={Painting4} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>Information for the artist</h1>
+            </div>
           </div>
         </div>
-
-        <div className="anonym_2">  
-          <div className="anonym-img">
-            <img src={Painting4} className="a-img"/>
-          </div>
-          <div className="anonym-title">
-            <h1>Information for the artist</h1>
-          </div>
-        </div>
-
       </div>
 
       <div className="container">
+        <div className="container-flex-control">
 
-        <div className="anonym_1">
-          <div className="anonym-img">
-            <img src={Painting5} className="a-img"/>
+          <div className="anonym_1">
+            <div className="anonym-img">
+              <img src={Painting5} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>Information for the artist</h1>
+            </div>
           </div>
-          <div className="anonym-title">
-            <h1>Information for the artist</h1>
+          
+          <div className="anonym_2">
+            <div className="anonym-img">
+              <img src={Painting6} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>Information for the artist</h1>
+            </div>
           </div>
         </div>
-        
-        <div className="anonym_2">
-          <div className="anonym-img">
-            <img src={Painting6} className="a-img"/>
-          </div>
-          <div className="anonym-title">
-            <h1>Information for the artist</h1>
-          </div>
-        </div>
-
       </div>
 
     </div>

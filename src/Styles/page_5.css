@@ -34,7 +34,7 @@
   }
 
   .anonym-img{
-    max-width: 15rem;
+    max-width: 20rem;
     background-color: aqua;
     margin: 0 auto;
   }
@@ -52,8 +52,9 @@
     font-size: .5rem;
   }
 
-  @media only screen and (min-width: 426px){
+  @media only screen and (min-width: 500px){
     .container-flex-control{
       flex-direction: row;
+      align-items: center;
     }
   }
