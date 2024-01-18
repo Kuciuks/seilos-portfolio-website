@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import '../Styles/page_3.css'
 import S_1 from '../assets/seilos-1.jpg'
 import S_2 from '../assets/seilos-2.jpg'
@@ -9,12 +9,13 @@ import { useEffect } from 'react'
 export default function Page_3() {
 
   const [currentPage, setCurrentPage] = useState(0)
+  const usePageArr = useRef(null)
 
   useEffect(()=>{
     const left = document.querySelector('.control-left')
     const right = document.querySelector('.control-right')
-    const pageArr = document.querySelectorAll('.page')
-    console.log(pageArr)
+    usePageArr.current = document.querySelectorAll('.page')
+    console.log(usePageArr.current)
 
     left.addEventListener('click', handleControlLeft)
     right.addEventListener('click', handleControlRight)
@@ -28,14 +29,18 @@ export default function Page_3() {
 
   const handleControlLeft = () => {
     console.log('Clicked left')
-    setCurrentPage(previous => previous-=1)
-
+    let curr = currentPage
+    curr-=1
+    setCurrentPage(curr)
+    usePageArr.current[curr].scrollIntoView()
   }
 
   const handleControlRight = () => {
     console.log("Clicked right")
-    setCurrentPage(previous => previous+=1)
-    console.log(currentPage)
+    let curr = currentPage
+    curr+=1
+    setCurrentPage(curr)
+    usePageArr.current[curr].scrollIntoView()
   }
 
   return (
