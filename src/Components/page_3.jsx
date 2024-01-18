@@ -1,16 +1,47 @@
+import { useState } from 'react'
 import '../Styles/page_3.css'
 import S_1 from '../assets/seilos-1.jpg'
 import S_2 from '../assets/seilos-2.jpg'
 import S_3 from '../assets/seilos-3.jpg'
 import S_4 from '../assets/seilos-4.jpg'
+import { useEffect } from 'react'
 
 export default function Page_3() {
 
+  const [currentPage, setCurrentPage] = useState(0)
+
+  useEffect(()=>{
+    const left = document.querySelector('.control-left')
+    const right = document.querySelector('.control-right')
+    const pageArr = document.querySelectorAll('.page')
+    console.log(pageArr)
+
+    left.addEventListener('click', handleControlLeft)
+    right.addEventListener('click', handleControlRight)
+    
+    return(()=>{
+      left.removeEventListener('click', handleControlLeft)
+      right.removeEventListener('click', handleControlRight)
+    })
+  })
+
+
+  const handleControlLeft = () => {
+    console.log('Clicked left')
+    setCurrentPage(previous => previous-=1)
+
+  }
+
+  const handleControlRight = () => {
+    console.log("Clicked right")
+    setCurrentPage(previous => previous+=1)
+    console.log(currentPage)
+  }
 
   return (
-    <div className="page_3_container" id='3'>
-
-        <div className='artist-1'>
+    <div>
+      <div className="page_3_container" id='3'>
+        <div className='artist-1 page'>
           <div className='artist-container'>
             <div className='image-1'>
               <img src={S_1} className='image'/>
@@ -21,7 +52,7 @@ export default function Page_3() {
           </div>
         </div>
 
-        <div className='artist-2'>
+        <div className='artist-2 page'>
           <div className='artist-container'>
             <div className='image-2'>
               <img src={S_2} className='image'/>
@@ -32,7 +63,7 @@ export default function Page_3() {
           </div>
         </div>
 
-        <div className='artist-3'>
+        <div className='artist-3 page'>
           <div className='artist-container'>
             <div className='image-3'>
               <img src={S_3} className='image'/>
@@ -43,7 +74,7 @@ export default function Page_3() {
           </div>
         </div>
 
-        <div className='artist-4'>
+        <div className='artist-4 page'>
           <div className='artist-container'>
             <div className='image-4'>
               <img src={S_4} className='image'/>
@@ -53,7 +84,12 @@ export default function Page_3() {
             </div>
           </div>
         </div>
-        
+      </div>
+      <div className='control-container'>
+        <div className='control-left'>-</div>
+        <div className='control-right'>+</div>
+      </div>
     </div>
+    
   )
 }

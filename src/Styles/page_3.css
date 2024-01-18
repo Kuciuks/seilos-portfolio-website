@@ -7,6 +7,7 @@
     height: 100vh;
 }
 
+
 .artist-1, .artist-2, .artist-3, .artist-4, .artist-5, .artist-6 {
     scroll-snap-align: center;
     scroll-snap-stop: always;
@@ -38,5 +39,18 @@
     border-bottom: 2px solid rgb(254, 254, 255);
     font-size: .8rem;
     margin: 0 auto;
+}
+
+.control-container{
+    position: relative;
+    bottom: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.control-left, .control-right{
+    background-color: aliceblue;
+    padding: 10px
+
 }
 
