@@ -28,19 +28,33 @@ export default function Page_3() {
 
 
   const handleControlLeft = () => {
-    console.log('Clicked left')
     let curr = currentPage
-    curr-=1
-    setCurrentPage(curr)
-    usePageArr.current[curr].scrollIntoView()
+    
+    if(curr == 0){
+      alert("Cannot scroll left no more!, current page: ",curr)
+    }
+    else{
+      curr-=1
+      console.log('Clicked left, current page: ',curr)
+
+      setCurrentPage(curr)
+      usePageArr.current[curr].scrollIntoView()  
+    }
   }
 
   const handleControlRight = () => {
-    console.log("Clicked right")
     let curr = currentPage
-    curr+=1
-    setCurrentPage(curr)
-    usePageArr.current[curr].scrollIntoView()
+    
+    if(curr == 3){
+      alert("Cannot scroll right no more!, current page: ",curr)
+    }
+    else{
+      curr+=1
+      console.log('Clicked right, current page: ',curr)
+
+      setCurrentPage(curr)
+      usePageArr.current[curr].scrollIntoView()  
+    }
   }
 
   return (
