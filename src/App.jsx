@@ -31,14 +31,15 @@ export default function App() {
         useSectionArray.current[currentP].scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
     };
+
     useSectionArray.current = document.querySelectorAll('.mp');
 
     window.addEventListener("wheel", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleTouchMove)
+    window.addEventListener("touchmove", handleScroll)
 
     return () => {
       window.removeEventListener("wheel", handleScroll, { passive: false });
-      window.removeEventListener("touchmove", handleTouchMove)
+      window.removeEventListener("touchmove", handleScroll)
     };
   }, [curr]);
 
