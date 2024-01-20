@@ -15,7 +15,7 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = (e) => {
-      e.preventDefault(); // Prevent default browser scroll behavior
+      e.preventDefault();
       let currentP = curr;
 
       if (e.deltaY > 0) {
@@ -35,18 +35,11 @@ export default function App() {
     useSectionArray.current = document.querySelectorAll('.mp');
 
     window.addEventListener("wheel", handleScroll, { passive: false });
-    window.addEventListener("touchmove", handleScroll)
 
     return () => {
       window.removeEventListener("wheel", handleScroll, { passive: false });
-      window.removeEventListener("touchmove", handleScroll)
     };
   }, [curr]);
-
-
-
-
-
 
 
   return (
