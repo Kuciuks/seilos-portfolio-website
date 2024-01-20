@@ -30,17 +30,15 @@ export default function App() {
         setCurr(currentP);
         useSectionArray.current[currentP].scrollIntoView({ behavior: 'smooth', block: 'end' });
       }
-
-      setTimeout(() => {
-        console.log("Done scroll");
-      }, 2000);
     };
+    useSectionArray.current = document.querySelectorAll('.mp');
 
     window.addEventListener("wheel", handleScroll, { passive: false });
-    useSectionArray.current = document.querySelectorAll('.mp');
+    window.addEventListener("touchmove", handleTouchMove)
 
     return () => {
       window.removeEventListener("wheel", handleScroll, { passive: false });
+      window.removeEventListener("touchmove", handleTouchMove)
     };
   }, [curr]);
 
