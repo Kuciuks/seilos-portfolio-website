@@ -33,6 +33,7 @@
     margin: 0 5rem;
     max-width: 20rem;
     padding-bottom: 1.25rem;
+    z-index: 2;
 }
 .title-1,.title-2,.title-3,.title-4,.title-5,.title-6{
     color: antiquewhite;
@@ -44,13 +45,32 @@
 .control-container{
     position: relative;
     bottom: 50vh;
-    display: flex;
+    display: none;
     justify-content: space-between;
+    z-index: 0;
 }
 
 .control-left, .control-right{
     background-color: aliceblue;
-    padding: 10px
-
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.control-left{
+    margin-left: 2rem;
+}
+.control-right{
+    margin-right: 2rem;
+}
+
+@media only screen and (min-width: 1024px){
+    .control-container{
+        display: flex;
+    }
+}
+
 

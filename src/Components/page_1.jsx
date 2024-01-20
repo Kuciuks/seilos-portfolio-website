@@ -15,10 +15,10 @@ export default function Page_1() {
   const handleIntersection = (entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      console.log(entry)
+      // console.log(entry)
       setState(true);
     } else {
-      console.log(false)
+      // console.log(false)
       setState(false);
     }
   };

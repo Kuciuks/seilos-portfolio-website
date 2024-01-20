@@ -15,7 +15,7 @@ export default function Page_3() {
     const left = document.querySelector('.control-left')
     const right = document.querySelector('.control-right')
     usePageArr.current = document.querySelectorAll('.page')
-    console.log(usePageArr.current)
+    // console.log(usePageArr.current)
 
     left.addEventListener('click', handleControlLeft)
     right.addEventListener('click', handleControlRight)
@@ -35,10 +35,10 @@ export default function Page_3() {
     }
     else{
       curr-=1
-      console.log('Clicked left, current page: ',curr)
+      // console.log('Clicked left, current page: ',curr)
 
       setCurrentPage(curr)
-      usePageArr.current[curr].scrollIntoView()  
+      usePageArr.current[curr].scrollIntoView({behavior: 'smooth', block: 'center'})  
     }
   }
 
@@ -50,10 +50,10 @@ export default function Page_3() {
     }
     else{
       curr+=1
-      console.log('Clicked right, current page: ',curr)
+      // console.log('Clicked right, current page: ',curr)
 
       setCurrentPage(curr)
-      usePageArr.current[curr].scrollIntoView()  
+      usePageArr.current[curr].scrollIntoView({behavior: 'smooth', block: 'center'})  
     }
   }
 

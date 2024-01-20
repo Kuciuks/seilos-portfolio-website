@@ -9,67 +9,65 @@ import Page6 from './Components/page_6.jsx';
 export default function App() {
 
 
-  // const divRef = useRef(null)
-  // const countRef = useRef(null)
-
-  // const handleScroll = () => {
-  //   divRef.current = document.querySelector('.main')
-  //   countRef.current = document.querySelector('.hero2')
-  //   const sections = divRef.current.children;
-
-  //   console.log(sections)
-
-  //   // for (let i = 0; i < sections.length; i++) {
-  //   //   const rect = sections[i].getBoundingClientRect();
-  //   //   if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
-  //   //     console.log(`Scrolled to section ${i + 1}`);
-  //   //     if(i == 1){
-  //   //       countRef.current.classList.add('run_out')
-  //   //       countRef.current.classList.remove('run_in')
-  //   //     }
-  //   //     else{
-  //   //       countRef.current.classList.remove('run_out')
-  //   //     }
-
-  //   //     break; // Stop checking further sections
-  //   //   }
-  //   // }
-  // }
+  const [curr, setCurr] = useState(0)
+  const useSectionArray = useRef(null)
 
 
+  useEffect(() => {
+    const handleScroll = (e) => {
+      e.preventDefault(); // Prevent default browser scroll behavior
+      let currentP = curr;
+
+      if (e.deltaY > 0) {
+        console.log("scroll down");
+        currentP += 1;
+      } else {
+        console.log("scroll up");
+        currentP -= 1;
+      }
+
+      if (currentP >= 0 && currentP < useSectionArray.current.length) {
+        setCurr(currentP);
+        useSectionArray.current[currentP].scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+
+      setTimeout(() => {
+        console.log("Done scroll");
+      }, 2000);
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    useSectionArray.current = document.querySelectorAll('.mp');
+
+    return () => {
+      window.removeEventListener("wheel", handleScroll, { passive: false });
+    };
+  }, [curr]);
 
 
-  // useEffect(() => {
-  //   divRef.current = document.querySelector('.main')
-  //   countRef.current = document.querySelector('.hero2')
-  //   countRef.current.classList.add('run_in')
-  //   window.addEventListener("wheel", handleScroll)
-  
-  //   return()=>{
-  //     window.removeEventListener("wheel", handleScroll)
-  //   }
-  // })
+
+
 
 
 
   return (
     <div className='main'>
-      <div className='page_1' id='pages'>
+      <div className='page_1 mp' id='pages'>
         <Page1 />
       </div>
-      <div className='page_2' id='pages'>
+      <div className='page_2 mp' id='pages'>
         <Page2 />
       </div>
-      <div className='page_3' id='pages'>
+      <div className='page_3 mp' id='pages'>
         <Page3 />
       </div>
-      <div className='page_4' id='pages'>
+      <div className='page_4 mp' id='pages'>
         <Page4 />
       </div>
-      <div className='page_5' id='pages'>
+      <div className='page_5 mp' id='pages'>
         <Page5 />
       </div>
-      <div className='page_6' id='pages'>
+      <div className='page_6 mp' id='pages'>
         <Page6 />
       </div>
     </div>

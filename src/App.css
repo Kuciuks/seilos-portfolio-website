@@ -6,25 +6,22 @@
 }
 
 .main{
+    height: 100vh;
     width: 100vw;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     background-color: #000000;
-    height: 100vh;
 }
 
 .main > div{
     height: 100vh;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
 
 /* Optional: Hide scrollbar track */
-.main::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 0;
 }
 
 /* Optional: Hide scrollbar handle */
-.main::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
