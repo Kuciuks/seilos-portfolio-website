@@ -14,7 +14,7 @@
     height: inherit;
     width: inherit;
   }
-  
+
   .container-flex-control{
     display: flex;
     justify-content: space-evenly;
@@ -33,7 +33,6 @@
   }
 
   .anonym-img{
-    max-width: 22rem;
     background-color: aqua;
     margin: 0 auto;
   }
@@ -46,14 +45,52 @@
   }
 
   .anonym-title{
-    margin: .5rem 0 0 0;
+    margin: .2rem 0 0 0;
     color: aliceblue;
-    font-size: 1rem;
   }
 
   @media only screen and (min-width: 1104px){
     .container-flex-control{
       flex-direction: row;
       align-items: center;
+    }
+    .anonym-img{
+      max-width: 25rem;
+    }
+    .anonym-title{
+      font-size: 1.3rem;
+    }
+  }
+  @media only screen and (max-width: 1103px){
+    .anonym-img{
+      max-width: 22rem;
+    }
+    .anonym-title{
+      font-size: 1.1rem;
+    }
+  }
+  @media only screen and (max-width: 700px){
+    .anonym-img{
+      max-width: 16rem;
+    }
+    .anonym-title{
+      font-size: .85rem;
+    }
+  }
+  @media only screen and (max-width: 542px){
+    .anonym-img{
+      max-width: 13.5rem;
+    }
+    .anonym-title{
+      font-size: .75rem;
+    }
+  }
+
+  @media only screen and (max-width: 323px){
+    .anonym-img{
+      max-width: 10rem;
+    }
+    .anonym-title{
+      font-size: .5rem;
     }
   }
