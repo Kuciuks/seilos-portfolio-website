@@ -5,6 +5,8 @@ import Painting3 from "../assets/painting3.jpg"
 import Painting4 from "../assets/painting4.jpg"
 import Painting5 from "../assets/painting5.jpg"
 import Painting6 from "../assets/painting6.jpg"
+import Painting7 from "../assets/painting7.jpg"
+import Painting8 from "../assets/painting8.jpg"
 export default function Page_5() {
   return (
     <div className="page_5_container">
@@ -79,6 +81,28 @@ export default function Page_5() {
         </div>
       </div>
 
+      <div className="container">
+        <div className="container-flex-control">
+
+          <div className="anonym_1">
+            <div className="anonym-img">
+              <img src={Painting7} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>D. J. age 52 (Lithuania)</h1>
+            </div>
+          </div>
+          
+          <div className="anonym_2">
+            <div className="anonym-img">
+              <img src={Painting8} className="a-img"/>
+            </div>
+            <div className="anonym-title">
+              <h1>A. R. age 18 (United Kingdom)</h1>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
