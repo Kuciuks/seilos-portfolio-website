@@ -17,7 +17,7 @@ export default function Page_5() {
               <img src={Painting1} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>N. N. age 21 (Lithuania)</h1>
             </div>
           </div>
         
@@ -26,7 +26,7 @@ export default function Page_5() {
               <img src={Painting2} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>E. T. age 26 (United Kingdom)</h1>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ export default function Page_5() {
               <img src={Painting3} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>K. M. age 20 (Lithuania)</h1>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ export default function Page_5() {
               <img src={Painting4} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>S. M. age 21 (United Kingdom)</h1>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function Page_5() {
               <img src={Painting5} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>U. P. age 30 (Denmark)</h1>
             </div>
           </div>
           
@@ -73,7 +73,7 @@ export default function Page_5() {
               <img src={Painting6} className="a-img"/>
             </div>
             <div className="anonym-title">
-              <h1>Information for the artist</h1>
+              <h1>U. P. age 21 (Sweden)</h1>
             </div>
           </div>
         </div>
