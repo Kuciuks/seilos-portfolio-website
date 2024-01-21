@@ -3,7 +3,6 @@
     white-space: nowrap; /* Prevent line breaks between artists */
     scroll-snap-type: x mandatory;
     display: flex;
-    align-items: center;
     width: 100vw;
     height: 100vh;
   }
@@ -34,7 +33,7 @@
   }
 
   .anonym-img{
-    max-width: 15rem;
+    max-width: 22rem;
     background-color: aqua;
     margin: 0 auto;
   }
@@ -49,10 +48,10 @@
   .anonym-title{
     margin: .5rem 0 0 0;
     color: aliceblue;
-    font-size: .5rem;
+    font-size: 1rem;
   }
 
-  @media only screen and (min-width: 500px){
+  @media only screen and (min-width: 1104px){
     .container-flex-control{
       flex-direction: row;
       align-items: center;

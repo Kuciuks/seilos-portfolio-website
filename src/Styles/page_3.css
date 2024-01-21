@@ -5,6 +5,7 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    padding: 0px;
 }
 
 
@@ -31,14 +32,13 @@
 }
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6{
     margin: 0 5rem;
-    max-width: 20rem;
+    max-width: 25rem;
     padding-bottom: 1.25rem;
     z-index: 2;
 }
 .title-1,.title-2,.title-3,.title-4,.title-5,.title-6{
     color: antiquewhite;
     border-bottom: 2px solid rgb(254, 254, 255);
-    font-size: .8rem;
     margin: 0 auto;
 }
 

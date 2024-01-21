@@ -9,7 +9,7 @@
 /* First part of the home screen (the title image) */
 .hero1{
   object-fit: contain;
-  max-width: 60rem;
+  max-width: 45rem;
   margin: 0 auto;
 }
 .person {
@@ -73,9 +73,11 @@
   }
   .hero2{
     display: block;
-    scale: .8;
+    max-width: 30rem;
+    right: 8%;
   }
   .hero1{
     padding: 0 0 5rem 0;
+    right: 8%;
   }
 }
