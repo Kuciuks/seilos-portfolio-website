@@ -65,7 +65,8 @@ export default function Page_3() {
               <img src={S_1} className='image'/>
             </div>
             <div className='title-1'>
-              <h1>Seila Zilinskaite. 2023. Untitled. (Acrylic paint). 46 x 61.</h1>
+              <h1>Seila Zilinskaite. 2023. Untitled.</h1>
+              <h1>(Acrylic paint). 46 x 61.</h1>
             </div>
           </div>
         </div>
@@ -76,7 +77,8 @@ export default function Page_3() {
               <img src={S_2} className='image'/>
             </div>
             <div className='title-2'>
-              <h1>Seila Zilinskaite. 2023. Untitled. (Acrylic paint). 60 x 75.</h1>
+              <h1>Seila Zilinskaite. 2023. Untitled.</h1>
+              <h1>(Acrylic paint). 60 x 75.</h1>
             </div>
           </div>
         </div>
@@ -87,7 +89,8 @@ export default function Page_3() {
               <img src={S_3} className='image'/>
             </div>
             <div className='title-3'>
-              <h1>Seila Zilinskaite. 2023. Untitled. (Acrylic paint). 22,5 x 30.</h1>
+              <h1>Seila Zilinskaite. 2023. Untitled.</h1>
+              <h1>(Acrylic paint). 22,5 x 30.</h1>
             </div>
           </div>
         </div>
@@ -98,7 +101,8 @@ export default function Page_3() {
               <img src={S_4} className='image'/>
             </div>
             <div className='title-4'>
-              <h1>Seila Zilinskaite. 2023. Untitled. (Acrylic paint). 22,5x30.</h1>
+              <h1>Seila Zilinskaite. 2023. Untitled.</h1>
+              <h1>(Acrylic paint). 22,5x30.</h1>
             </div>
           </div>
         </div>
