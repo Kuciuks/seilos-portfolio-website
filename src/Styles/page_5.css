@@ -94,3 +94,36 @@
       font-size: .5rem;
     }
   }
+
+
+
+  .control-container{
+    position: relative;
+    bottom: 50vh;
+    display: none;
+    justify-content: space-between;
+    z-index: 0;
+}
+
+.control-left-2, .control-right-2{
+    background-color: aliceblue;
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-left-2{
+    margin-left: 2rem;
+}
+.control-right-2{
+    margin-right: 2rem;
+}
+
+@media only screen and (min-width: 1024px){
+    .control-container{
+        display: flex;
+    }
+}

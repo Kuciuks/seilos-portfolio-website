@@ -1,10 +1,9 @@
-import { useRef, useState } from 'react'
 import '../Styles/page_3.css'
 import S_1 from '../assets/seilos-1.jpg'
 import S_2 from '../assets/seilos-2.jpg'
 import S_3 from '../assets/seilos-3.jpg'
 import S_4 from '../assets/seilos-4.jpg'
-import { useEffect } from 'react'
+import { useRef, useState, useEffect} from 'react'
 
 export default function Page_3() {
 
