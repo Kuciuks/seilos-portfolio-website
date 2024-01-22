@@ -6,22 +6,22 @@ export default function Page_6() {
 
       <div className="part_1">
         <div className="documentation">
-          Documentation text etc.
+          <h1>Contact info:</h1>
         </div>
       </div>
 
       <div className="part_2">
         <div className="email">
-          example@gmail.com
+          <h1>seilazi23@gmail.com</h1>
         </div>
         <div className="insta">
-          @example
+          <a href="https://www.instagram.com/lilo0202/"><h1>Instagram</h1></a>
         </div>
       </div>
 
       <div className="part_3">
         <div className="credits">
-          Documentation text etc.
+          <a href="https://github.com/Kuciuks"><h1>Developer</h1></a>
         </div>
       </div>
 

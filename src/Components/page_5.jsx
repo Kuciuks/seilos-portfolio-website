@@ -7,6 +7,7 @@ import Painting5 from "../assets/painting5.jpg"
 import Painting6 from "../assets/painting6.jpg"
 import Painting7 from "../assets/painting7.jpg"
 import Painting8 from "../assets/painting8.jpg"
+import arr1 from '../assets/arrow.png'
 import { useRef, useState, useEffect} from 'react'
 
 export default function Page_5() {
@@ -34,7 +35,7 @@ export default function Page_5() {
     let curr = currentPage
     
     if(curr == 0){
-      alert("Cannot scroll left no more!, current page: ",curr)
+      alert("Cannot scroll left no more!")
     }
     else{
       curr-=1
@@ -49,7 +50,7 @@ export default function Page_5() {
     let curr = currentPage
     
     if(curr == 3){
-      alert("Cannot scroll right no more!, current page: ",curr)
+      alert("Cannot scroll right no more!")
     }
     else{
       curr+=1
@@ -160,8 +161,8 @@ export default function Page_5() {
       </div>
       
       <div className='control-container'>
-        <div className='control-left-2'>-</div>
-        <div className='control-right-2'>+</div>
+        <img className='control-left-2' src={arr1}/>
+        <img className='control-right-2' src={arr1}/>
       </div>
     </div>  
   )

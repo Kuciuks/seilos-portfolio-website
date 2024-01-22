@@ -4,37 +4,44 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    color: white;
     font-size: 2.25rem;
 }
 
 .part_1{
     display: flex;
     align-items: center;
-    border: 2px solid white;
+    margin: 0 auto;
+
 }
 
 .part_2{
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    justify-content:space-evenly;
+    align-items: center;
+    border: 2px solid white;
+    background-color: blueviolet;
 }
 
 .part_3{
+    border: 2px solid white;
     background-color: blueviolet;
     display: flex;
     align-items: center;
-    border: 2px solid white;
+    padding: .85rem;
 }
-
+.credits > a > h1{
+    color:rgb(238, 153, 122);
+}
+.insta > a > h1 {
+    color:rgb(238, 153, 122);
+}
+a{
+    text-decoration: none;
+}
 .email{
-    margin-bottom: 1rem;
-    padding: .5rem;
-    background-color: aquamarine;
-    border: 2px solid white;
+    padding: 1rem;
 }
 .insta{
-    padding: .5rem;
-    background-color: rgb(45, 45, 150);
-    border: 2px solid white;
+    padding: 0 1rem 1rem 1rem;
 }

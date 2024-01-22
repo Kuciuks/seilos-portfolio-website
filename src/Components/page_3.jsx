@@ -3,6 +3,7 @@ import S_1 from '../assets/seilos-1.jpg'
 import S_2 from '../assets/seilos-2.jpg'
 import S_3 from '../assets/seilos-3.jpg'
 import S_4 from '../assets/seilos-4.jpg'
+import arr from '../assets/arrow.png'
 import { useRef, useState, useEffect} from 'react'
 
 export default function Page_3() {
@@ -30,7 +31,7 @@ export default function Page_3() {
     let curr = currentPage
     
     if(curr == 0){
-      alert("Cannot scroll left no more!, current page: ",curr)
+      alert("Cannot scroll left no more!")
     }
     else{
       curr-=1
@@ -45,7 +46,7 @@ export default function Page_3() {
     let curr = currentPage
     
     if(curr == 3){
-      alert("Cannot scroll right no more!, current page: ",curr)
+      alert("Cannot scroll right no more!")
     }
     else{
       curr+=1
@@ -108,8 +109,8 @@ export default function Page_3() {
         </div>
       </div>
       <div className='control-container'>
-        <div className='control-left'>-</div>
-        <div className='control-right'>+</div>
+        <img className='control-left' src={arr}/>
+        <img className='control-right' src={arr}/>
       </div>
     </div>
     

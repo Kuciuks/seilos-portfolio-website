@@ -12,14 +12,14 @@ h1{
     text-align: center;
 }
 .instructions{    
-    max-width: 35rem;
+    max-width: 30rem;
     height: 50%;
     margin: 0 auto;
     display: flex;
     align-items: start;
 }
 .invitation{    
-    max-width: 35rem;
+    max-width: 30rem;
     height: 50%;
     margin: 0 auto;
     display: flex;
