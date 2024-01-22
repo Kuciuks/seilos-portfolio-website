@@ -9,37 +9,37 @@ import Page6 from './Components/page_6.jsx';
 export default function App() {
 
 
-  const [curr, setCurr] = useState(0)
-  const useSectionArray = useRef(null)
+  // const [curr, setCurr] = useState(0)
+  // const useSectionArray = useRef(null)
 
+  // useEffect(() => {
+  //   const handleScroll = (e) => {
+  //     e.preventDefault();
+  //     console.log(e)
+  //     let currentP = curr;
 
-  useEffect(() => {
-    const handleScroll = (e) => {
-      e.preventDefault();
-      let currentP = curr;
+  //       if (e.deltaY > 0) {
+  //         console.log("scroll down");
+  //         currentP += 1;
+  //       } else {
+  //         console.log("scroll up");
+  //         currentP -= 1;
+  //       }
 
-      if (e.deltaY > 0) {
-        console.log("scroll down");
-        currentP += 1;
-      } else {
-        console.log("scroll up");
-        currentP -= 1;
-      }
+  //     if (currentP >= 0 && currentP < useSectionArray.current.length) {
+  //       setCurr(currentP);
+  //       useSectionArray.current[currentP].scrollIntoView({ behavior: 'smooth', block: 'end' });
+  //     }
+  //   };
 
-      if (currentP >= 0 && currentP < useSectionArray.current.length) {
-        setCurr(currentP);
-        useSectionArray.current[currentP].scrollIntoView({ behavior: 'smooth', block: 'end' });
-      }
-    };
+  //   useSectionArray.current = document.querySelectorAll('.mp');
 
-    useSectionArray.current = document.querySelectorAll('.mp');
+  //   window.addEventListener("wheel", handleScroll, { passive: false });
 
-    window.addEventListener("wheel", handleScroll, { passive: false });
-
-    return () => {
-      window.removeEventListener("wheel", handleScroll, { passive: false });
-    };
-  }, [curr]);
+  //   return () => {
+  //     window.removeEventListener("wheel", handleScroll, { passive: false });
+  //   };
+  // }, [curr]);
 
 
   return (
