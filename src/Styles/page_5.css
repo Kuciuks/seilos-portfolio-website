@@ -44,7 +44,7 @@
     border: .2rem solid rgb(190, 11, 245);
   }
 
-  .anonym-title{
+  h1{
     margin: .2rem 0 0 0;
     color: aliceblue;
   }
@@ -57,32 +57,29 @@
     .anonym-img{
       max-width: 25rem;
     }
-    .anonym-title{
-      font-size: 1.3rem;
+    h1{
+      font-size: 2.2rem;
     }
   }
   @media only screen and (max-width: 1103px){
     .anonym-img{
       max-width: 22rem;
     }
-    .anonym-title{
-      font-size: 1.1rem;
-    }
   }
   @media only screen and (max-width: 700px){
     .anonym-img{
       max-width: 16rem;
     }
-    .anonym-title{
-      font-size: .85rem;
+    h1{
+      font-size: 2rem;
     }
   }
   @media only screen and (max-width: 542px){
     .anonym-img{
       max-width: 13.5rem;
     }
-    .anonym-title{
-      font-size: .75rem;
+    h1{
+      font-size: 1.2rem;
     }
   }
 
@@ -90,8 +87,8 @@
     .anonym-img{
       max-width: 10rem;
     }
-    .anonym-title{
-      font-size: .5rem;
+    h1{
+      font-size: .9rem;
     }
   }
 
@@ -100,7 +97,7 @@
   .control-container{
     position: relative;
     bottom: 50vh;
-    display: none;
+    display: flex;
     justify-content: space-between;
     z-index: 0;
 }
@@ -122,8 +119,8 @@
     margin-right: 2rem;
 }
 
-@media only screen and (min-width: 1024px){
+/* @media only screen and (min-width: 1024px){
     .control-container{
         display: flex;
     }
-}
+} */
